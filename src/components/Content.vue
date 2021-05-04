@@ -1,6 +1,10 @@
 <template>
   <main>
-      content here...
+      <div class="content">
+          <div class="container">
+              <h1>content here...</h1>
+          </div>
+      </div>
   </main>
 </template>
 
@@ -10,6 +14,15 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
+
+.content {
+    height: 135px;
+    background-color: #1c1c1c;
+}
+
+h1 {
+    color: white;
+}
 
 </style>
