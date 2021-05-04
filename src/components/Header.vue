@@ -3,7 +3,7 @@
       <img src="../assets/img/dc-logo.png" alt="DC logo">
       <nav>
           <ul>
-              <li v-for="(link, index) in navLinks" :key="index">
+              <li v-for="(link, index) in navLinks" :key="index" :class="{active: link.current}">
                   <a :href="link.url"> {{ link.text }} </a>
               </li>
           </ul>
@@ -78,7 +78,7 @@ ul li {
 }
 
 li:hover,
-li:active{
+li.active{
     border-bottom: 3px solid #0c7cec;
 }
 
