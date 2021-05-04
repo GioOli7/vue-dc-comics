@@ -74,12 +74,15 @@ ul {
 
 ul li {
     padding: 10px;
-    border-bottom: 3px solid transparent;
+    border-bottom: 5px solid transparent;
+    height: 150px;
+    display: flex;
+    align-items: center;
 }
 
 li:hover,
 li.active{
-    border-bottom: 3px solid #0c7cec;
+    border-bottom: 5px solid #0c7cec;
 }
 
 
@@ -87,7 +90,6 @@ li a {
     color: black;
     font-size: 12px;
     font-weight: bold;
-    height: 100%;
 }
 
 
