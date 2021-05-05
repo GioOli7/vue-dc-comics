@@ -27,6 +27,10 @@ export default {
   clip-path: border-box;
 }
 
+img {
+  width: 100%;
+}
+
 .title {
   display: inline-block;
   margin-top: 15px;
