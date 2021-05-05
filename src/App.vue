@@ -1,7 +1,11 @@
 <template>
   <div id="app">
     <Header />
-    <Content />
+    <main>
+
+      <Content />
+
+    </main>
     <Footer />
   </div>
 </template>
@@ -10,6 +14,7 @@
 import Header from '@/components/Header.vue';
 import Content from '@/components/Content.vue';
 import Footer from '@/components/Footer.vue';
+
 
 export default {
   name: 'App',
@@ -30,7 +35,7 @@ export default {
 }
 
 .container {
-  max-width: 1100px;
+  max-width: 1170px;
   margin: 0 auto;
   height: 100%;
 }
