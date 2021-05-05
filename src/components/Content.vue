@@ -29,7 +29,9 @@ export default {
 }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
+@import "@/styles/vars.scss";
+
 
 .content {
     background-color: #1c1c1c;
@@ -39,7 +41,7 @@ export default {
     display: inline-block;
     padding: 10px 55px;
     color: white;
-    background-color: dodgerblue;
+    background-color: $primary;
     margin: 0 auto;
     font-weight: bold;
     font-size: 12px;

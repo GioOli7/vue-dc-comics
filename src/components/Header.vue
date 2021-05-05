@@ -4,7 +4,7 @@
       <nav>
           <ul>
               <li v-for="(link, index) in navLinks" :key="index" :class="{active: link.current}">
-                  <a :href="link.url"> {{ link.text }} </a>
+                  <a :href="link.url" :class="{active: link.current}"> {{ link.text }} </a>
               </li>
           </ul>
       </nav>
@@ -12,43 +12,15 @@
 </template>
 
 <script>
+import navLinks from '@/data/navLinks.js';
+
 export default {
     // per coerenza inserisco lo stesso nome che ha il componente
     name: 'Header',
     data() {
         return {
-            navLinks: [
-                {
-                    text:'characters', url:"/characters", current: true,
-                },
-                {
-                    text:'comics', url:"/comics", current: false,
-                }, 
-                {
-                    text:'movies', url:"/movies", current: false,
-                },
-                {
-                    text:'tv', url:"/tv", current: false,
-                },
-                {
-                    text:'games', url:"/games", current: false,
-                },
-                {
-                    text:'collectibles', url:"/collectibles", current: false,
-                }, 
-                {
-                    text:'videos', url:"/videos", current: false,
-                }, 
-                {
-                    text:'fans', url:"/fans", current: false,
-                },
-                {
-                    text:'news', url:"/news", current: false,
-                },
-                {
-                    text:'shop', url:"/shop", current: false,
-                },
-            ],
+            // sarebbe come -> navLinks: navLinks; siccome hanno lo stesso nome, sfrutto ES per abbreviare.
+            navLinks,
         }
     }
 
@@ -57,7 +29,9 @@ export default {
 
 
 
-<style scoped>
+<style scoped lang="scss">
+@import "@/styles/vars.scss";
+
 
 header {
     display: flex;
@@ -67,30 +41,57 @@ header {
     padding: 20px 0;
 }
 
+.active {
+    color: $primary;
+}
+
 ul {
     display: flex;
     text-transform: uppercase;
+    li {
+        padding: 10px;
+        border-bottom: 5px solid transparent;
+        height: 150px;
+        display: flex;
+        align-items: center;
+        &:hover,
+        &.active {
+            border-bottom: 5px solid $primary;
+        }
+        a {
+            color: black;
+            font-size: 12px;
+            font-weight: bold;
+        }
+    }
 }
 
-ul li {
-    padding: 10px;
-    border-bottom: 5px solid transparent;
-    height: 150px;
-    display: flex;
-    align-items: center;
-}
+// **********OLD CSS for example
+// ul {
+//     display: flex;
+//     text-transform: uppercase;
+    
+// }
 
-li:hover,
-li.active{
-    border-bottom: 5px solid #0c7cec;
-}
+// ul li {
+//     padding: 10px;
+//     border-bottom: 5px solid transparent;
+//     height: 150px;
+//     display: flex;
+//     align-items: center;
+// }
+
+// li:hover,
+// li.active{
+//     border-bottom: 5px solid #0c7cec;
+// }
 
 
-li a {
-    color: black;
-    font-size: 12px;
-    font-weight: bold;
-}
+// li a {
+//     color: black;
+//     font-size: 12px;
+//     font-weight: bold;
+// }
 
 
 </style>

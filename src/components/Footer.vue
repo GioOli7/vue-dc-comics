@@ -74,19 +74,19 @@ export default {
 }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
+@import "@/styles/vars.scss";
+
 
 ul {
     margin-bottom: 20px;
-}
-
-ul li {
-    margin-bottom: 5px;
-}
-
-ul li a {
-    color: gray;
-    font-weight: normal;
+    li {
+        margin-bottom: 5px;
+        a {
+            color: gray;
+            font-weight: normal;
+        }
+    }
 }
 
 .upper-footer {
@@ -125,7 +125,7 @@ ul li a {
 .sign-up a {
    text-transform: uppercase;
     padding: 10px 25px;
-    border: 2px solid dodgerblue;
+    border: 2px solid $primary;
     color: white;
     font-size: 20px;
 }
@@ -133,14 +133,12 @@ ul li a {
 .social-icons {
     display: flex;
     align-items: center;
-}
-
-.social-icons a{
-    margin-left: 15px;
-}
-
-.social-icons h3 {
-    color: dodgerblue;
+    a {
+        margin-left: 15px;
+    }
+    h3 {
+        color: $primary;
+    }
 }
 
 </style>
