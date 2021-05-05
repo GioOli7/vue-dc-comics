@@ -24,6 +24,7 @@ export default {
 
 .card-img {
   height: 185px;
+  width: 185px;
   clip-path: border-box;
 }
 

@@ -4,6 +4,7 @@
     <main>
       <Hero />
       <Content />
+      <BannerShop />
     </main>
     <Footer />
   </div>
@@ -14,6 +15,8 @@ import Header from '@/components/Header.vue';
 import Content from '@/components/Content.vue';
 import Footer from '@/components/Footer.vue';
 import Hero from '@/components/Hero.vue';
+import BannerShop from '@/components/BannerShop.vue';
+
 
 
 export default {
@@ -22,6 +25,7 @@ export default {
     Header,
     Hero,
     Content,
+    BannerShop,
     Footer,
   }
 }
@@ -36,7 +40,7 @@ export default {
 }
 
 .container {
-  max-width: 1170px;
+  max-width: 1250px;
   margin: 0 auto;
   height: 100%;
 }
