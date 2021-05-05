@@ -2,6 +2,7 @@
   <footer>
       <div class="upper-footer">
           <div class="container"> 
+            <img src="../assets/img/dc-logo-bg.png" alt=""> 
             <div class="links-list">
                 <div class="col">
                     <ul>
@@ -92,6 +93,8 @@ ul {
 .upper-footer {
     background-image: url("../assets/img/footer-bg.jpg");
     background-size: cover;
+    position: relative;
+    overflow: hidden;
 }
 
 .links-list {
@@ -139,6 +142,12 @@ ul {
     h3 {
         color: $primary;
     }
+}
+
+.upper-footer img {
+    position: absolute;
+    right: 225px;
+    top: -125px;
 }
 
 </style>
