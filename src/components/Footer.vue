@@ -52,7 +52,7 @@
       <div class="down-footer">
           <div class="container footer">
               <div class="sign-up">
-                  <a href="#">Sign up</a>
+                  <a href="#">Sign up now!</a>
                 </div>
                 <div class="social-icons">
                     <h3>FOLLOW US</h3>
